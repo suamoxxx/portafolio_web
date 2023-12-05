@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/book.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet"><title>CV</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+        <style>
+          * {
+            padding: 0;
+            margin: 0;
+          }
+          body {
+            background-color: #29045A;
+            color: white;
+            font-family: 'Nunito', sans-serif;
+          }
+          nav {
+            background-color: #48005E;
+            height: 55px;
+            grid-column-start: 1;
+            grid-column-end: 5; 
+            width: 100% ;
+            position: fixed;
+            z-index: 1;
+          }
+          .ico {
+            width: 45px;
+            height: 45px;
+          }
+          footer {
+            background-color: #48005E;
+            color: white;
+          }
+          button {
+            background-color: #D498C6;
+            color: white;
+            border-style: none;
+            font-size: 20px;
+            border-radius: 5px;
+          }
+          p {
+            font-size: 16px;
+            display: flex;
+          }
+          nav div > ul li {
+            list-style: none;
+            position: relative;
+          }
+          nav ul {
+            display: flex;
+            float: right;
+          }
+          nav ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: white;
+            font-size: 18px;
+            display: flex;
+          }
+          nav ul li a:hover {
+            text-transform: uppercase;
+          }
+          #container {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(7,1fr);
+
+          }
+          #main {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+          }
+          #about {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+          }
+          #contact {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 5;
+            grid-row-end: 5;
+          }
+          #skill {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 7;
+            grid-row-end: 8;
+            padding: 10px;
+            margin: 10px;
+          }
+          footer {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 8;       
+            height: 40px;
+            text-align: center;
+          }
+          a { 
+            text-decoration: none;
+            color: white;
+          }
+          nav ul li a:hover {
+            color: #29045A;
+          }
+          nav ul li:hover {
+            background-color: #D498C6;
+            border-radius: 3px;
+            color: #29045A;
+          }
+          .contact {
+            animation: bit 1.5s ease-in-out infinite;
+          }
+          .contact:hover {
+            background-color: #29045A;
+            border: 1px solid #D498C6;
+           color: #D498C6;
+          }
+          h1,h2,h3,h4,h5 {
+            font-size: 30px;
+            font-family: 'Lora', serif;
+          }
+          #sub_container {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            gap: 10px;
+          }
+          #btn_one {
+            grid-row-start: 4;
+            height: 64px;
+          }
+          #btn_one:hover {
+            color: #D498C6;
+          }
+          @keyframes bit {
+                from {
+                  transform:scale(1); 
+                  animation-timing-function: ease-out;
+                }
+                10% {
+                  transform:scale(0.91);
+                  animation-timing-function: ease-in;
+                }
+                17% {
+                    transform: scale(0.98);
+                    animation-timing-function: ease-out;
+                }
+                33% {
+                    transform: scale(0.87);
+                    animation-timing-function: ease-in;
+                }
+                45% {
+                    transform: scale(1);
+                    animation-timing-function: ease-out;
+                }
+          }
+
+          @keyframes bit {
+              from {
+                        transform: scale(1);                    
+              }
+              10% {
+                        transform: scale(0.91);
+                        animation-timing-function: ease-in;
+              }
+              17% {
+                        transform: scale(0.98);
+                        animation-timing-function: ease-out;
+              }
+              33% {
+                        transform: scale(0.87);
+                        animation-timing-function: ease-in;
+              }
+              45% {
+                        transform: scale(1);
+                        animation-timing-function: ease-out;
+              }
+
+           }
+          #p_main {
+            grid-row-start: 2;
+          }
+          #img_main {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 5;
+            width: 100%;
+            height: 70%;
+            border-radius: 50% 20% / 10% 40%;
+          }
+          #a_text {
+            color:white;
+          }
+          #btn_one:hover #a_text {
+            color: #D498C6;
+          }
+   
+          #sub_container_about {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,120px);  
+            overflow: hidden;         
+          }
+          #img_about {
+            grid-column-start: 1;
+            grid-row-start: 2;
+            border-radius: 50% 20% / 10% 40%;
+            width: 100%;
+          }
+          #p_about {
+            grid-column-start: 2;
+            grid-row-start: 2;
+            display: flex;
+            text-align: center;
+          }
+
+          #git {
+            grid-column-start: 1;
+            grid-row-start: 4;
+          }
+          #link {
+            grid-column-start: 2;
+            grid-row-start: 4;
+          }
+          #gmail {
+            grid-column-start: 3;
+            grid-row-start: 4;
+          }
+          #text_about {
+            grid-column-start: 2;
+            grid-column-end: 3;
+          }
+
+          #sub_container_contact {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(4,1fr);
+            gap: 10px;
+          }
+          #btn_contact {
+            grid-column-start: 2;
+            width: 250px;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            height: 64px;
+          }
+          #text_contact {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+          }
+          #phone {
+            grid-column-start: 1;
+            grid-row-start: 2;
+          }
+          #correo {
+            grid-column-start: 1;
+            grid-row-start: 3;
+          }
+          #maps {
+            grid-column-start: 1;
+            grid-row-start: 4;
+          }
+          #phone, #correo, #maps {
+            display: flex;
+            align-items: center;
+          }
+          #text_co {
+            font-size: 20px;
+          }
+          a:visited {
+            color: white;
+          }
+          #subcontainer_skill {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(3,1fr);
+            
+          }
+          h4 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+          }
+          #html {
+            grid-column-start: 1;
+            grid-row-start: 2;
+          }
+          #css {
+            grid-column-start: 2;
+            grid-row-start: 2;
+          }
+          #js {
+            grid-column-start: 3;
+            grid-row-start: 2;
+          }
+          #mysql {
+            grid-column-start: 4;
+            grid-row-start: 2;
+          }
+          #node {
+            grid-column-start: 2;
+            grid-row-start: 4;
+          }
+          #react {
+            grid-column-start: 3;
+            grid-row-start: 4;
+          }
+
+          .targets {
+            transform: scale(0.2);
+            opacity: 1;
+            transition: all 1.4s ease-out;
+          }
+          .showObserver {
+            transform: scale(1);
+            opacity: 1;
+            transition: all 1.4s ease-out;
+          }
+          .icos {
+            width: 40px;
+            height: 35px;
+          }
+        </style>
+    </head>
+    <body id="container">
+
+      <nav>
+        <div id="con_nav">
+          <a href="https://github.com/suamoxxx"><img src="github.png" alt="logo_github" class="icos"></a>
+          <ul>
+            <li><a href="#btn_one"">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#btn_contact">contact Me</a></li>
+            <li><a href="#react">skill</a></li>
+          </ul>
+        </div>  
+      </nav>
+
+
+        <section id="main" class="targets">
+          <div id="sub_container">
+            <h1 id="section1">Hi, My name is David Limas</h1>
+            <img id="img_main" src="david.avif" alt="animal">
+            <p id="p_main">I have computer and network technology,
+            this together with experience in different fields of the IT sector allowed me to be close to the development area.</p>
+            <button id="btn_one" class="contact"><a id="a_text" href="#contact">contact me</a></button>
+          </div>
+        </section>
+
+
+        <section id="about" class="targets">
+          <div id="sub_container_about">
+              <h2 id="text_about">About me</h2>
+              <img id="img_about" src="david2.avif" alt="animal">
+              <p id="p_about">I am studying software engineering,this together with knowledge
+              that I acquired by my own pleasure allows me to better understand the world of software development.</p>
+              <a id="git" href="https://github.com/suamoxxx"><img src="github.png" alt="logo_github" class="ico"></a>
+              <a id="link" href="https://co.linkedin.com/"><img src="linkedin.png" alt="logo_linkedin" class="ico"></a>
+              <a id="gmail" href="https://gmail.com"><img src="gmail.png" alt="logo_correo electronic" class="ico"></a>
+          </div>
+        </section>
+
+
+        <section id="contact" class="targets">
+          <div id="sub_container_contact">
+            <h3 id="text_contact">contact me</h3>
+            <div id="phone">
+              <img  src="phone.png" alt="telefono">
+              <p id="text_co">3138470125</p>
+            </div>
+            <div id="maps">
+              <img src="location.png" alt="locacion">
+              <p id="text_co">Bogota DC</p>
+            </div>
+            <div id="correo">
+              <img src="correo.png" alt="correo">
+              <p id="text_co">dafevi.limas@gmail.com</p>
+            </div>
+            <button class="contact" id="btn_contact">contact me</button>
+          </div>  
+        </section>
+
+
+        <section id="skill" class="targets">
+          <div id="subcontainer_skill">
+              <h4>skill, use of technologies</h4>
+
+              <div id="html">
+                <img src="html.png" alt="logo html" class="ico">
+                <p>html</p>
+              </div>
+              
+              <div id="css">
+                <img src="css.png" alt="logo react js" class="ico">
+                <p>css</p>
+              </div>
+
+              <div id="js">
+                <img src="js.png" alt="logo react js" class="ico">
+                <p>javascript</p>
+              </div>
+              
+              <div id="node">
+                <img src="node.png" alt="logo node.js" class="ico">
+                <p>node js</p>
+              </div>
+
+              <div id="mysql">
+                <img src="mysql.png" alt="logo Mysql" class="ico">
+                <p>mysql</p>
+              </div>
+
+              <div id="react">
+                <img src="react.png" alt="logo react js" class="ico">
+                <p>react</p>
+              </div>   
+          </div>    
+        </section>
+
+
+        <footer id="footer"><span id="textDinamic">By DFVL</span></footer>
+   
+        <script>
+         //Observador de interseccion
+         const opcion = {
+          root:null,
+         
+          threshold:1.0
+         } 
+
+         let objetivoOculto = document.querySelectorAll('.targets');
+
+         let interseccionObsevada = new IntersectionObserver(
+          entries=>{
+            entries.forEach((entry)=>{
+                entry.target.classList.toggle('showObserver',entry.isIntersecting);
+            })
+          }, opcion);
+
+         objetivoOculto.forEach((seccion)=>interseccionObsevada.observe(seccion)); 
+        
+            //Texto dinamico
+          setInterval(()=>{
+            const owner = 'Don Felipe Limas';
+            document.getElementById('textDinamic').innerText = `Esta web la realizo ${owner}`;
+          },3000); 
+      
+        </script>
+    </body>
+</html>
