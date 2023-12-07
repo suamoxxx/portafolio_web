@@ -23,7 +23,7 @@
           }
           nav {
             background-color: #48005E;
-            height: 55px;
+            height: 45px;
             grid-column-start: 1;
             grid-column-end: 5; 
             width: 100% ;
@@ -71,7 +71,6 @@
             display: grid;
             grid-template-columns: repeat(4,1fr);
             grid-template-rows: repeat(7,1fr);
-
           }
           #main {
             grid-column-start: 2;
@@ -165,7 +164,6 @@
                     animation-timing-function: ease-out;
                 }
           }
-
           @keyframes bit {
               from {
                         transform: scale(1);                    
@@ -186,7 +184,6 @@
                         transform: scale(1);
                         animation-timing-function: ease-out;
               }
-
            }
           #p_main {
             grid-row-start: 2;
@@ -205,8 +202,7 @@
           }
           #btn_one:hover #a_text {
             color: #D498C6;
-          }
-   
+          } 
           #sub_container_about {
             display: grid;
             grid-template-columns: repeat(4,1fr);
@@ -225,7 +221,6 @@
             display: flex;
             text-align: center;
           }
-
           #git {
             grid-column-start: 1;
             grid-row-start: 4;
@@ -242,7 +237,6 @@
             grid-column-start: 2;
             grid-column-end: 3;
           }
-
           #sub_container_contact {
             display: grid;
             grid-template-columns: repeat(3,1fr);
@@ -332,6 +326,30 @@
             width: 40px;
             height: 35px;
           }
+          .animated::after {
+            content: "|";
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-name: parpadeo;
+          }
+          @keyframes parpadeo {
+            0% {
+              opacity: 1;
+            }
+            20% {
+              opacity: 1;
+            }
+            25% {
+              opacity: 0;
+            }
+            90% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
         </style>
     </head>
     <body id="container">
@@ -351,7 +369,7 @@
 
         <section id="main" class="targets">
           <div id="sub_container">
-            <h1 id="section1">Hi, My name is David Limas</h1>
+            <p id="section1" class="animated">Hi, My name is David Limas, soy ingeniero en Sotfware</p>
             <img id="img_main" src="david.avif" alt="animal">
             <p id="p_main">I have computer and network technology,
             this together with experience in different fields of the IT sector allowed me to be close to the development area.</p>
@@ -435,28 +453,38 @@
         <script>
          //Observador de interseccion
          const opcion = {
-          root:null,
-         
+          root:null, 
           threshold:1.0
          } 
-
          let objetivoOculto = document.querySelectorAll('.targets');
-
          let interseccionObsevada = new IntersectionObserver(
           entries=>{
             entries.forEach((entry)=>{
                 entry.target.classList.toggle('showObserver',entry.isIntersecting);
             })
           }, opcion);
-
          objetivoOculto.forEach((seccion)=>interseccionObsevada.observe(seccion)); 
-        
-            //Texto dinamico
+          //Texto dinamico
           setInterval(()=>{
             const owner = 'Don Felipe Limas';
             document.getElementById('textDinamic').innerText = `Esta web la realizo ${owner}`;
           },3000); 
-      
+          //Escritura de texto en pantalla
+          const text = document.getElementById('section1');
+          let str = text.innerHTML;
+          text.innerHTML= "";
+          let i = 0;
+          const speed = 100;
+          const typeText = ()=> {
+            if(i < str.length) {
+              text.innerHTML += str.charAt(i);
+              i++;
+              setTimeout(typeText,speed);
+            }
+          };
+          setInterval(() => {
+            setTimeout(typeText,speed);
+          }, 3000);
         </script>
     </body>
 </html>
