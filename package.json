@@ -4,7 +4,7 @@
   "description": "curriculum landing page",
   "main": "n",
   "scripts": {
-    "curriculum": "nodemon server.js"
+    "curriculum": "node server.js"
   },
   "keywords": [
     "curriculum"
