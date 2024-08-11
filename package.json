@@ -1,0 +1,22 @@
+{
+  "name": "curriculum",
+  "version": "1.0.0",
+  "description": "curriculum landing page",
+  "main": "n",
+  "scripts": {
+    "curriculum": "nodemon server.js"
+  },
+  "keywords": [
+    "curriculum"
+  ],
+  "author": "David Limas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4"
+  }
+}
+
+
