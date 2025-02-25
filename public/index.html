@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
         <link rel="shortcut icon" href="./img/favicon.png">
-
         <title>Portafolio web</title>
     </head>
     <body id="container">
@@ -17,75 +16,84 @@
         <img class="error" src="./img/favicon.png">
       </div>
 
-      <div id="sub-body">
+      <div>
         <section class="targets">
           <div id="sec1">
-            <img  id="img-iam" class="img-1" src="./img/david2.png">
-            <p id="p2-sec1">Hola, me llamo Felipe Limas, soy Ing. en Software.</p>
-            <p id="p-sec1">Soy desarrollador Full-stack y un entusiasta por mi trabajo, me gustan los nuevos retos que trae consigo el desarrollo.</p>
-            <button id="btn_one" class="contact">Contactame</button>
-            <p id="sec2-p">Encuentrame en</p>
-            <div id="cont">  
+            <p id="p2-sec1" class="modal-hidden">Hola, me llamo Felipe Limas, soy Ing. en Software.</p>
+            <p id="p-sec1" class="modal-hidden">Soy un desarrollador y un entusiasta por mi trabajo, me gustan los nuevos retos que trae consigo el desarrollo.</p>
+            <img  id="img-iam" class="img-1 modal-hidden" src="./img/david2.png">
+            <p id="sec2-p" class="modal-hidden">Encuentrame en</p>
+            <div id="cont" class="modal-hidden">  
               <a href="#text_contact"><img id="img_main" src="./img/gmail.png" class="ico"></a>
               <a href="#contact"><img id="img_main" src="./img/github.png" class="ico"></a>
               <a href="#contact"><img id="img_main" src="./img/linkedin.png" class="ico"></a>
               <a href="#contact"><img id="img_main" src="./img/wp.png" class="ico"></a>
-              <a href="#contact"><img id="img_main" src="./img/phone2.png" class="ico"></a>
             </div>
+            <button id="btn_one" class="contact modal-hidden">Contactame</button>
+            <div id="form-modal" class="hidden">
+              <div ><img id="closed-modal" class="img-exit" src="./img/exit.png"/></div>
+              <h4 class="text-modal">Enviame un correo</h4>
+              <form id="form-main">
+                  <input type="text" name="name-modal" id="name-modal" placeholder="nombre" required>
+                  <input type="email" name="email-modal" id="email-modal" placeholder="correo" required>
+                  <textarea placeholder="mensaje" id="message-modal" name="message"></textarea>
+                  <input type="submit" class="contact" id="btn_contact2" value="enviar">
+              </form>
+          </div>
           </div>
         </section>
         <div id="lin2"></div>
 
         <section class="targets">
           <div id="sec2">
+            <h2 id="text_about">Sobre mi</h2>
+              <img id="img-iam2" class="img-sec2" src="./img/pcs.jpg">
+              <p id="p_about">Apasionado de la tecnología y autodidacta. Comprometido con el aprendizaje 
+                continuo y la resolución de problemas complejos mediante soluciones innovadoras. </p>
             <div class="ctc">
               <a id="git" href="https://www.whatsapp.com/?lang=es_LA"><img id="img_about" src="./img/gmail.png" ></a>
               <a id="link" href="https://co.linkedin.com/"><img id="img_about" src="./img/linkedin.png" ></a>
               <a id="link" href="https://co.linkedin.com/"><img id="img_about" src="./img/wp.png" ></a>
-            </div>
-              <h2 id="text_about">Sobre mi</h2>
-              <img id="img-iam2" class="img-sec2" src="./img/pcs.jpg">
-              <p id="p_about">Apasionado de la tecnología y autodidacta. Comprometido con el aprendizaje 
-                continuo y la resolución de problemas complejos mediante soluciones innovadoras. </p>      
+            </div                    
           </div>
+
         </section>
 
         <div></div>
         <div id="lin"></div>
         <section id="contact" class="targets">
           <div id="sec3">
-            
             <h3 id="text_contact">Contacto</h3>
-            <div id="phone">
-              <img id="ico" class="up" src="./img/phone2.png" alt="telefono">
-              <p id="text_co">3138470125</p>
+            <div class="ico-cuad">
+              
+              <div id="maps">
+                <img id="ico" class="up" src="./img/location.png" alt="locacion">
+                <p id="text_co">Bogota DC</p>
+              </div>
+              <div id="correo">
+                <img id="ico" class="up" src="./img/gmail.png" alt="correo">
+                <p id="text_co">dafevi.limas@<br>
+                  gmail.com</p>
+              </div>
+              <div id="linked">
+                <img id="ico" class="up" src="./img/linkedin.png" alt="correo">
+                <p id="text_co">Linkedin</p>
+              </div>  
+              <div id="whas">
+                <img id="ico" class="up" src="./img/wp.png" alt="correo">
+                <p id="text_co">WhatsApp</p>
+              </div>  
+              <div id="gith">
+                <img id="ico" class="up" src="./img/github.png" alt="correo">
+                <p id="text_co">Github</p>
+              </div>  
             </div>
-            <div id="maps">
-              <img id="ico" class="up" src="./img/location.png" alt="locacion">
-              <p id="text_co">Bogota DC</p>
-            </div>
-            <div id="correo">
-              <img id="ico" class="up" src="./img/gmail.png" alt="correo">
-              <p id="text_co">dafevi.limas@gmail.com</p>
-            </div>
-            <div id="linked">
-              <img id="ico" class="up" src="./img/linkedin.png" alt="correo">
-              <p id="text_co">Linkedin</p>
-            </div>  
-            <div id="whas">
-              <img id="ico" class="up" src="./img/wp.png" alt="correo">
-              <p id="text_co">WhatsApp</p>
-            </div>  
-            <div id="gith">
-              <img id="ico" class="up" src="./img/github.png" alt="correo">
-              <p id="text_co">Github</p>
-            </div>  
               <div id="form">
                 <h4>Enviame un correo</h4>
-                <form action="https://formsubmit.co/dafevi.limas@gmail.com" method="POST">
-                    <input type="text" name="name" id="" placeholder="nombre" required>
-                    <input type="email" name="email" id="" placeholder="correo" required>
-                    <textarea placeholder="mensaje" name="message"></textarea>
+                <form id="form-contact">
+                    <input type="text" name="name" id="name" placeholder="nombre" required>
+                    <input type="email" name="email" id="email" placeholder="correo" required>
+                    <textarea placeholder="mensaje" id="message" name="message"></textarea>
                     <input type="submit" class="contact" id="btn_contact2" value="enviar">
                 </form>
             </div>
@@ -98,36 +106,9 @@
              <div id="txt-sec4">
               <h4>Tecnologias usadas</h4>
              </div>
+             <div class="slide">
 
-              <div id="html">
-                <img id="mongoose" src="./img/azure.png" alt="logo html" class="ico">
-                <p>azure</p>
-              </div>
-              
-              <div id="css">
-                <img class="css" src="./img/css.png" class="ico">
-                <p>css</p>
-              </div>
-
-              <div id="js">
-                <img id="mongoose" src="./img/sql.png" class="ico">
-                <p>Sql</p>
-              </div>
-              
-              <div id="node">
-                <img id="mongoose" src="./img/node.png" alt="logo node.js" class="ico">
-                <p>node js</p>
-              </div>
-
-              <div id="react">
-                <img id="mongoose" src="./img/react.png" alt="logo react js" class="ico">
-                <p>react</p>
-              </div>
-              
-              <div id="mongo">
-                <img id="mongoose" src="./img/mongo.png" alt="logo mongo js" class="ico">
-                <p>mongoose</p>
-              </div>
+             </div> 
           </div>    
         </section>
       </div> 

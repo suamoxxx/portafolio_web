@@ -1,473 +1,776 @@
-body{
-    margin: 0;
+* {
     padding: 0;
-    height: 1800px;
-    background-color: #c7c7c7;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
     width: 100%;
-    max-width: 1000px;
 }
-nav {
-    width: 100%; 
-    border: 0;
-    display: flex;
-    position: fixed;
-    z-index: 1000;
+html {
+    height: 100%;
 }
-footer {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background-color: #ff6600;
-    color: white;
 
-}
-section {
-    padding: 5px; 
-    display: grid;
-}
-textarea {
-    height: 100px;
-}
-input, textarea {
-    border: 0;
-    text-align: center;
-    position: relative;
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    justify-content: center;
-    display: flex;
-}
-input::placeholder{
-    color: #ff6600;
-}
-textarea::placeholder{
-    color: #ff6600;
-}
-h4 {
-    text-align: center;
-    font-size: 20px;
-    position: relative;
-}
-#wave {
-    z-index: 999;
-    height:15vh;
-    background-color: #ff6600;
-    transform: scale(1.20 ,-1);
-    position: relative;
-    top: 25px;
-    clip-path: polygon(0% 0%, 0% 82.5%, 1.69492% 84.3293%, 3.38983% 86.1385%, 5.08475% 87.9078%, 6.77966% 89.6179%, 8.47458% 91.25%, 10.1695% 92.7862%, 11.8644% 94.2098%, 13.5593% 95.505%, 15.2542% 96.6578%, 16.9492% 97.6555%, 18.6441% 98.487%, 20.339% 99.1435%, 22.0339% 99.6176%, 23.7288% 99.9041%, 25.4237% 100%, 27.1186% 99.9041%, 28.8136% 99.6176%, 30.5085% 99.1435%, 32.2034% 98.487%, 33.8983% 97.6555%, 35.5932% 96.6578%, 37.2881% 95.505%, 38.9831% 94.2098%, 40.678% 92.7862%, 42.3729% 91.25%, 44.0678% 89.6179%, 45.7627% 87.9078%, 47.4576% 86.1385%, 49.1525% 84.3293%, 50.8475% 82.5%, 52.5424% 80.6708%, 54.2373% 78.8616%, 55.9322% 77.0922%, 57.6271% 75.3821%, 59.322% 73.75%, 61.017% 72.2138%, 62.7119% 70.7902%, 64.4068% 69.495%, 66.1017% 68.3422%, 67.7966% 67.3446%, 69.4915% 66.513%, 71.1864% 65.8565%, 72.8814% 65.3824%, 74.5763% 65.0959%, 76.2712% 65%, 77.9661% 65.0959%, 79.661% 65.3824%, 81.3559% 65.8565%, 83.0509% 66.513%, 84.7458% 67.3446%, 86.4407% 68.3422%, 88.1356% 69.495%, 89.8305% 70.7902%, 91.5254% 72.2138%, 93.2203% 73.75%, 94.9153% 75.3821%, 96.6102% 77.0922%, 98.3051% 78.8616%, 100% 80.6708%, 100% 0%); shape-outside: polygon(0% 0%, 0% 82.5%, 1.69492% 84.3293%, 3.38983% 86.1385%, 5.08475% 87.9078%, 6.77966% 89.6179%, 8.47458% 91.25%, 10.1695% 92.7862%, 11.8644% 94.2098%, 13.5593% 95.505%, 15.2542% 96.6578%, 16.9492% 97.6555%, 18.6441% 98.487%, 20.339% 99.1435%, 22.0339% 99.6176%, 23.7288% 99.9041%, 25.4237% 100%, 27.1186% 99.9041%, 28.8136% 99.6176%, 30.5085% 99.1435%, 32.2034% 98.487%, 33.8983% 97.6555%, 35.5932% 96.6578%, 37.2881% 95.505%, 38.9831% 94.2098%, 40.678% 92.7862%, 42.3729% 91.25%, 44.0678% 89.6179%, 45.7627% 87.9078%, 47.4576% 86.1385%, 49.1525% 84.3293%, 50.8475% 82.5%, 52.5424% 80.6708%, 54.2373% 78.8616%, 55.9322% 77.0922%, 57.6271% 75.3821%, 59.322% 73.75%, 61.017% 72.2138%, 62.7119% 70.7902%, 64.4068% 69.495%, 66.1017% 68.3422%, 67.7966% 67.3446%, 69.4915% 66.513%, 71.1864% 65.8565%, 72.8814% 65.3824%, 74.5763% 65.0959%, 76.2712% 65%, 77.9661% 65.0959%, 79.661% 65.3824%, 81.3559% 65.8565%, 83.0509% 66.513%, 84.7458% 67.3446%, 86.4407% 68.3422%, 88.1356% 69.495%, 89.8305% 70.7902%, 91.5254% 72.2138%, 93.2203% 73.75%, 94.9153% 75.3821%, 96.6102% 77.0922%, 98.3051% 78.8616%, 100% 80.6708%, 100% 0%);
-}
-#wax {
-    position: fixed;
-    text-align:center;
-    padding-top:1em;
-    left:0;
-    right:0;
-    top:0;
-    height:85vh;
-    background-color: #ff6600;
-    clip-path: polygon(100% 0%, 0% 0% , 0% 52.04%, 1% 52.03%, 2% 52.01%, 3% 51.97%, 4% 51.91%, 5% 51.84%, 6% 51.76%, 7% 51.66%, 8% 51.55%, 9% 51.42%, 10% 51.28%, 11% 51.13%, 12% 50.96%, 13% 50.78%, 14% 50.58%, 15% 50.38%, 16% 50.16%, 17% 49.93%, 18% 49.69%, 19% 49.44%, 20% 49.18%, 21% 48.92%, 22% 48.64%, 23% 48.36%, 24% 48.07%, 25% 47.77%, 26% 47.47%, 27% 47.16%, 28% 46.85%, 29% 46.53%, 30% 46.21%, 31% 45.89%, 32% 45.57%, 33% 45.24%, 34% 44.92%, 35% 44.60%, 36% 44.28%, 37% 43.96%, 38% 43.64%, 39% 43.33%, 40% 43.02%, 41% 42.72%, 42% 42.42%, 43% 42.13%, 44% 41.85%, 45% 41.57%, 46% 41.31%, 47% 41.05%, 48% 40.80%, 49% 40.56%, 50% 40.33%, 51% 40.12%, 52% 39.91%, 53% 39.72%, 54% 39.54%, 55% 39.37%, 56% 39.21%, 57% 39.07%, 58% 38.94%, 59% 38.83%, 60% 38.73%, 61% 38.65%, 62% 38.58%, 63% 38.53%, 64% 38.49%, 65% 38.47%, 66% 38.46%, 67% 38.47%, 68% 38.49%, 69% 38.53%, 70% 38.59%, 71% 38.66%, 72% 38.74%, 73% 38.84%, 74% 38.95%, 75% 39.08%, 76% 39.22%, 77% 39.38%, 78% 39.54%, 79% 39.73%, 80% 39.92%, 81% 40.13%, 82% 40.34%, 83% 40.57%, 84% 40.81%, 85% 41.06%, 86% 41.32%, 87% 41.59%, 88% 41.87%, 89% 42.15%, 90% 42.44%, 91% 42.74%, 92% 43.04%, 93% 43.35%, 94% 43.66%, 95% 43.98%, 96% 44.30%, 97% 44.62%, 98% 44.94%, 99% 45.26%, 100% 45.58%);
-}
-#form {
-    background-color: #ff6600;
-    height: 300px;
-    width: 280px;
-    color: white;
-    position: relative;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    position: relative;
-    top: 50px;
-}
-#ico {
-    width: 45px;
-    height: 45px;
-}
-#sub-body{
-    top: 70px;
-    position: relative;
-    z-index: 1;
-}
-#img-iam {
-    width: 420px;
-    height: 420px;
-    position: relative;
-    left: 95px;
-    border-radius: 32% 71% 36% 57% / 58% 48% 65% 33%;
-}
-#img-iam2 {
-    width: 550px;
-    height: 490px;
-    position: relative;
-    top: 8px;
-    left: 10px;
-    border-radius: 16% 80% 36% 57% / 58% 52% 52% 33%;
-}
-#img_about {
-    width: 35px;
-    height: 35px;
-    margin: 10px;
-} 
-#sec1, #sec2, #sec3, #sec4 {
-    height: 520px;
-    width: 950px;
-    margin-left: 25%;
-    margin-right: 25%;
-    box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    background-color: whitesmoke;
-    position: relative;
-    bottom: 30px;  
-    margin-top: 88px;
-    left: 50px;
-    display: grid;
-    grid-template-rows: repeat(4,1fr);
-    grid-template-columns: repeat(7,1fr);
-}
-#html, #css, #js, #node, #react {
-    height: 20%;
-    display: flex;
-    float: left;
-    margin: 15px;
-}
-#phone {
-    grid-column-start: 2;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    border: 2px solid #ff6600;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-}
-#correo {
-    grid-column-start: 4;
-    grid-row-start: 3;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    border: 2px solid #ff6600;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    position: relative;
-    bottom: 155px;
-}
-#linked {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    border: 2px solid #ff6600;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-}
-#whas {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    border: 2px solid #ff6600;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-}
-#maps {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    border: 2px solid #ff6600;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-}
-#gith{
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    grid-row-start: 3;
-    grid-column-start: 3;
-    border: 2px solid #ff6600;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    position: relative;
-    bottom: 155px;
-}
-#img-iam, #p2-sec1, #p-sec1 {
-    position: relative;
-    margin-top: 60px;
-}
-#sec4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 22222222222222222;
-}
-#name {
-    color: #ff6600;
-    font-weight: bold;
-}
-#btn_one {
-    width: 100px;
-    height: 40px;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    position: relative;
-    animation: delisiocin 0.8s linear infinite;
-    border: 0;
-    bottom: 135px;
-    left: 58px;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    background-color: #ff6600;
-    color: white;
-}
-#btn_one:hover {
-    background-color: white;
-    color: salmon;
-    border: 1px solid #ff6600;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-}
-#p-sec1 {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    position: relative;
-    bottom: 370px;
-    padding: 5px;
-    font-family: calibri;
-    letter-spacing: 1px;
-    left: 55px;
-}
-#p2-sec1 {
-    grid-column-start: 2;
-    width: 400px;
-    grid-row-start: 1;
-    font-size: 30px;
-    line-height: 26px;
-    font-family: Gill Sans Ultra Bold Condensed;
-    position: relative;
-    left: 60px;
-    top: 3vh;
-}
-#sec2 {
-    display: grid;
-    grid-template-rows: repeat(4,1fr);
-    grid-template-columns: repeat(7,1fr);
-}
-#p_about {
-    grid-column-start: 5;
-    grid-column-end: 7;
-    position: relative;
-    right: 110px;
-    font-size: 19px;
-    font-family: calibri;
-    width: 420px;
-}
-#git, #link, #gmail {
-    margin: 5px;
-}
-#text_about {
-    grid-row-start: 1;
-    position: relative;
-    right: 100px;
-    color: white;
-    background-color: #ff6600;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    width: 110px;
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    bottom: 16px;
-}
-#sec3 {
-    display: grid;
-    grid-template-rows: repeat(4,1fr);
-    grid-template-columns: repeat(7,1fr);
-}
-#text_contact {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    background-color: #ff6600;
-    color: white;
-    text-align: center;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    height: 40px;
-    align-content: center;
-    position: relative;
-    bottom: 17px;
-    left: 70px;
-}
-#text_co {
-   position: relative;
-   color: #ff6600;
-   font-family: calibri;
-   
-}
-#btn_contact2 {
-    width: 100px;
-    height: 30px;
-    position: relative;
-    animation: delisiocin 0.9s linear infinite;
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    color: #ff6600;
-    border: 1px solid white;
-}
-#btn_contact2:hover {
-    background-color: #ff6600;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-#sec4 {
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    grid-template-rows: repeat(4,1fr);
-}
-#html, #css, #react {
-    grid-row-start: 3;
-}
-#html {
-    grid-column-start: 2;
-}
-#css {
-    grid-column-start: 3;
-}
-#js {
-    grid-column-start: 4;
-    grid-row-start: 2;
-}
-#node {
-    grid-column-start: 3;
-    grid-row-start: 2;
-}
-#react {
-    grid-column-start: 4;
-    grid-row-start: 3;
-}
-#mongoose {
-    width: 70px;
-    height: 50px;
-}
-#mongo {
-    grid-column-start: 5;
-    grid-row-start: 3;
-}
-#txt-sec4 {
-    display: grid;
-    grid-column-start: 4;
-}
-#img_main {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    padding: 5px;
-}
-#cont {
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    width: 250px;
-    height: 40px;
-    position: relative;
-    top: 350px;
-    right: 700px;
-    display: flex;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-#curva {
-    clip-path: ellipse(68% 68% at 50% 7%);
-    background-color: #ff6600;
-    width: 150%;
-    height: 140px;
-    position: relative;
-}
-#sec2-p {
-    height: 35px;
-    width: 120px;
-    position: relative;
-    border-bottom: 1px solid;
-    right: 530px;
-    top: 300px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-left: 5px;
-    color: #ff6600;
-}
-.img-sec2 {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 4;  
-}
-.img-1 {
-    grid-column-start: 5;
-}
-.targets {
-    opacity: 0;
-}
-.showObserver {
-    opacity: 1;
-    animation: animateObserver 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-.css {
-    width: 100px;
-    height: 100px;
-}
-.ctc {
-    border-radius: 20px;
-    position: relative;
-    display: flex;
-    height: 60px;
-    top: 400px; 
-    right: 50px;   
-    border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.error {
-    height: 100px;
-    position: absolute;
-    display: block;
-    padding: 4px;
-    left: 5vh;
-    border-radius: 35%;
-    box-shadow: 7px 10px 19px -1px rgba(0,0,0,0.61);
-}
-.up {
-    position: relative;
-    bottom: 9px;
-    z-index: 88888;
-}
-@keyframes delisiocin {
-    0% {
-              transform: translate(0);
+/* -- Screen for smartphone --*/
+@media (min-width:320px){
+    section {
+        padding-top: 8vh;
     }
-    20% {
-              transform: translate(-2px, 2px);
+    body {
+        background-color: whitesmoke;
+        font-size: 1rem;
     }
-    40% {
-              transform: translate(-2px, -2px);
+    #sub-body {
+        display: flex;
+        flex-wrap: wrap;
     }
-    60% {
-              transform: translate(2px, 2px);
+    #wax {
+        width: 100%;
+        background-color: #ff6600;
+        height: 60%;
+        clip-path: polygon(100% 0%, 0% 0% , 0.00% 34.00%, 2.00% 34.28%, 4.00% 35.12%, 6.00% 36.49%, 8.00% 38.34%, 10.00% 40.60%, 12.00% 43.19%, 14.00% 46.02%, 16.00% 49.00%, 18.00% 52.01%, 20.00% 54.94%, 22.00% 57.71%, 24.00% 60.20%, 26.00% 62.33%, 28.00% 64.02%, 30.00% 65.22%, 32.00% 65.87%, 34.00% 65.97%, 36.00% 65.50%, 38.00% 64.48%, 40.00% 62.94%, 42.00% 60.95%, 44.00% 58.57%, 46.00% 55.89%, 48.00% 53.00%, 50.00% 50.00%, 52.00% 47.00%, 54.00% 44.11%, 56.00% 41.43%, 58.00% 39.05%, 60.00% 37.06%, 62.00% 35.52%, 64.00% 34.50%, 66.00% 34.03%, 68.00% 34.13%, 70.00% 34.78%, 72.00% 35.98%, 74.00% 37.67%, 76.00% 39.80%, 78.00% 42.29%, 80.00% 45.06%, 82.00% 47.99%, 84.00% 51.00%, 86.00% 53.98%, 88.00% 56.81%, 90.00% 59.40%, 92.00% 61.66%, 94.00% 63.51%, 96.00% 64.88%, 98.00% 65.72%, 100.00% 66.00%);
     }
-    80% {
-              transform: translate(2px, -2px);
+    .error {
+        width: 40%;
+        height: 20%;
+        opacity: 0;
     }
-    100% {
-              transform: translate(0);
+    /* -- Section one -- */
+    #img-iam {
+        width: 50%;
+        height: 50%;
     }
-  }
-@keyframes animateObserver {
-    0% {
-      transform: scale(0);
-      opacity: 1;
+    #p2-sec1 { 
+        font-weight: 800;
+        display: block;
     }
-    100% {
-        transform: scale(1);
-        opacity: 1;
+    .ico, #ico{
+        width: 4vh;
+        height: 4vh;
     }
-  }
-  @keyframes animateObserver {
-    0% {
-        transform: scale(0);
-        opacity: 1;
+    #sec1,#p2-sec1, #sec2-p {
+        padding: 2vh;
     }
-    100% {
-        transform: scale(1);
-        opacity: 1;
+    #img_about {
+        width: 5vh;
+        height: 5vh;
     }
-  }
+    #sec1{
+        text-align: center;
+        width: 90%;
+        height: 70%;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        margin: auto;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        max-height: 525px;
+        position: relative;
+        bottom: 5vh;
+    }
+    #btn_one {
+        background-color: #ff6600;
+        color: white;
+        border: 0;
+        width: 50%;
+        height: 3vh;
+        border-radius: 10px;
+        margin: auto;
+    }
+    #form-modal {
+        background-color: #ff6600;
+        width: 100%;
+        height: 25vh;
+        color: whitesmoke;
+        bottom: 95vh;
+        position: relative;
+        bottom: 38vh;
+        opacity: 0;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    .img-exit {
+        width: 25px;
+        height: 25px;
+        float: right;
+        position: relative;
+        bottom: 7vh;
+    }
+    #btn_one:hover {
+        background-color: whitesmoke;
+        border: 1px solid #ff6600;
+        color: #ff6600;
+    } 
+    #form-main  > input::placeholder {
+        color: #ff6600;
+        text-align: center;
+    }
+    #form-main  > textarea::placeholder {
+        color: #ff6600;
+        text-align: center;
+    } 
+    input, textarea {
+        border: 0;
+    }
+    textarea {
+        height: 8vh;
+    } 
+    /* -- Footer -- */
+    footer {
+        width: 100%;    
+        background-color: #ff6600;
+        height: 10vh;
+        clip-path: polygon(100% 100%, 0% 100% , 0.00% 29.00%, 2.00% 29.48%, 4.00% 30.89%, 6.00% 33.17%, 8.00% 36.21%, 10.00% 39.88%, 12.00% 44.01%, 14.00% 48.42%, 16.00% 52.89%, 18.00% 57.24%, 20.00% 61.25%, 22.00% 64.76%, 24.00% 67.59%, 26.00% 69.62%, 28.00% 70.76%, 30.00% 70.96%, 32.00% 70.20%, 34.00% 68.53%, 36.00% 66.01%, 38.00% 62.77%, 40.00% 58.94%, 42.00% 54.71%, 44.00% 50.26%, 46.00% 45.81%, 48.00% 41.54%, 50.00% 37.66%, 52.00% 34.34%, 54.00% 31.73%, 56.00% 29.95%, 58.00% 29.08%, 60.00% 29.17%, 62.00% 30.20%, 64.00% 32.13%, 66.00% 34.87%, 68.00% 38.31%, 70.00% 42.27%, 72.00% 46.58%, 74.00% 51.06%, 76.00% 55.48%, 78.00% 59.65%, 80.00% 63.39%, 82.00% 66.51%, 84.00% 68.89%, 86.00% 70.40%, 88.00% 70.99%, 90.00% 70.63%, 92.00% 69.32%, 94.00% 67.14%, 96.00% 64.18%, 98.00% 60.58%, 100.00% 56.49%);
+    }
+    /* -- Section Two -- */
+    #sec2{
+        text-align: center;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        padding: 3vh;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    .img-sec2 {
+        width: 50%;
+        height: 50%;
+    }
+    #p_about {
+        padding: 3vh;
+    }
+    #img-iam2 {
+        width: 80%;
+        height: 80%;
+    }
+    /* -- Section Three -- */
+    #sec3 {
+        text-align: center;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        padding: 3vh;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    #text_about {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 60%;
+        margin: auto;   
+    }
+    #sec3 {
+        padding: 2vh;
+    }
+    #linked, #whas, #gith, #correo, #maps, #phone {
+        border: 1px solid #ff6600;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    } 
+    .ico-cuad {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+    }
+    /* -- Section Four -- */
+    #sec4 {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        text-align: center;
+        padding: 3vh;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }     
+    .slide {
+        width: 30vh;
+        height: 35vh;
+        margin: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: slide-img 32s ease-in-out infinite;
+        padding-top: 5vh;
+    }
+    #txt-sec4 {
+        position: relative;
+        bottom: 2vh;
+        padding: 1vh;
+    }
+    @keyframes slide-img {
+        0% {background-image: url(./img/css.png);}
+        10% {background-image: url(./img/react.png);}
+        20% {background-image: url(./img/mongo.png);}
+        30% {background-image: url(./img/azure.png);}
+        40% {background-image: url(./img/piton.png);}
+        50% {background-image: url(./img/node.png);}
+        60% {background-image: url(./img/sql.png);}
+        70% {background-image: url(./img/powershell.png);}
+        80% {background-image: url(./img/linux.png);}
+        90% {background-image: url(./img/sql.png);}
+        100% {background-image: url(./img/jwt35ng);}
+    }   
+    #txt-sec4 {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 60%;
+        margin: auto;      
+    }
+    
+    #text_contact {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 60%;
+        margin: auto;
+    }
+    #form {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 70%;
+        height: 25vh;
+        margin: auto;
+        padding: 2vh;
+    }
+    textarea::placeholder {
+        color: #ff6600;
+        text-align: center;
+    }
+    input {
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    input::placeholder {
+        color: #ff6600;
+        text-align: center;
+    }
+    #btn_contact2 {
+        width: 50%;
+        background-color: whitesmoke;
+        color: #ff6600;
+        border-radius: 5px;
+        margin-top: 1vh;
+    }
+    #btn_contact2:hover {
+        background-color: #ff6600;
+        border: 1px solid whitesmoke;
+        color: azure;
+    }
+     
+}
 
+@media (min-width:587px){
+    section {
+        padding-top: 8vh;
+    }
+    body {
+        background-color: whitesmoke;
+        font-size: 1rem;
+    }
+    #sub-body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #wax {
+        width: 100%;
+        background-color: #ff6600;
+        height: 60%;
+        clip-path: polygon(100% 0%, 0% 0% , 0.00% 34.00%, 2.00% 34.28%, 4.00% 35.12%, 6.00% 36.49%, 8.00% 38.34%, 10.00% 40.60%, 12.00% 43.19%, 14.00% 46.02%, 16.00% 49.00%, 18.00% 52.01%, 20.00% 54.94%, 22.00% 57.71%, 24.00% 60.20%, 26.00% 62.33%, 28.00% 64.02%, 30.00% 65.22%, 32.00% 65.87%, 34.00% 65.97%, 36.00% 65.50%, 38.00% 64.48%, 40.00% 62.94%, 42.00% 60.95%, 44.00% 58.57%, 46.00% 55.89%, 48.00% 53.00%, 50.00% 50.00%, 52.00% 47.00%, 54.00% 44.11%, 56.00% 41.43%, 58.00% 39.05%, 60.00% 37.06%, 62.00% 35.52%, 64.00% 34.50%, 66.00% 34.03%, 68.00% 34.13%, 70.00% 34.78%, 72.00% 35.98%, 74.00% 37.67%, 76.00% 39.80%, 78.00% 42.29%, 80.00% 45.06%, 82.00% 47.99%, 84.00% 51.00%, 86.00% 53.98%, 88.00% 56.81%, 90.00% 59.40%, 92.00% 61.66%, 94.00% 63.51%, 96.00% 64.88%, 98.00% 65.72%, 100.00% 66.00%);
+    }
+    .error {
+        width: 40%;
+        height: 20%;
+        opacity: 0;
+    }
+    /* -- Section one -- */
+    #img-iam {
+        width: 50%;
+        height: 50%;
+    }
+    #p2-sec1 { 
+        font-weight: 800;
+        display: block;
+    }
+    .ico, #ico{
+        width: 5vh;
+        height: 5vh;
+    }
+    #sec1,#p2-sec1, #sec2-p {
+        padding: 2vh;
+    }
+    #img_about {
+        width: 5vh;
+        height: 5vh;
+    }
+    #p-sec1 {
+        width: 85%;
+        margin: auto;
+        padding: 1vh;
+    }
+    #sec1{
+        text-align: center;
+        width: 90%;
+        height: 70%;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        margin: auto;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        max-height: 525px;
+        position: relative;
+        bottom: 5vh;
+    }
+    #btn_one {
+        background-color: #ff6600;
+        color: white;
+        border: 0;
+        width: 35%;
+        height: 4vh;
+        border-radius: 10px;
+        position: relative;
+        bottom: 7vh;
+        left: 13vh;
+    }
+    #form-modal {
+        background-color: #ff6600;
+        width: 100%;
+        height: 25vh;
+        color: whitesmoke;
+        bottom: 95vh;
+        position: relative;
+        bottom: 38vh;
+        opacity: 0;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    .img-exit {
+        width: 25px;
+        height: 25px;
+        float: right;
+        position: relative;
+        bottom: 7vh;
+    }
+    #btn_one:hover {
+        background-color: whitesmoke;
+        border: 1px solid #ff6600;
+        color: #ff6600;
+    } 
+    #form-main  > input::placeholder {
+        color: #ff6600;
+        text-align: center;
+    }
+    #form-main  > textarea::placeholder {
+        color: #ff6600;
+        text-align: center;
+    } 
+    input, textarea {
+        border: 0;
+    }
+    textarea {
+        height: 8vh;
+    } 
+    #cont {
+        position: relative;
+        right: 12vh;
+        width: 80%;
+    }
+    #sec2-p {
+        color: #ff6600;
+        font-weight: bold;
+    }
+    /* -- Footer -- */
+    footer {
+        width: 100%;    
+        background-color: #ff6600;
+        height: 10vh;
+        clip-path: polygon(100% 100%, 0% 100% , 0.00% 29.00%, 2.00% 29.48%, 4.00% 30.89%, 6.00% 33.17%, 8.00% 36.21%, 10.00% 39.88%, 12.00% 44.01%, 14.00% 48.42%, 16.00% 52.89%, 18.00% 57.24%, 20.00% 61.25%, 22.00% 64.76%, 24.00% 67.59%, 26.00% 69.62%, 28.00% 70.76%, 30.00% 70.96%, 32.00% 70.20%, 34.00% 68.53%, 36.00% 66.01%, 38.00% 62.77%, 40.00% 58.94%, 42.00% 54.71%, 44.00% 50.26%, 46.00% 45.81%, 48.00% 41.54%, 50.00% 37.66%, 52.00% 34.34%, 54.00% 31.73%, 56.00% 29.95%, 58.00% 29.08%, 60.00% 29.17%, 62.00% 30.20%, 64.00% 32.13%, 66.00% 34.87%, 68.00% 38.31%, 70.00% 42.27%, 72.00% 46.58%, 74.00% 51.06%, 76.00% 55.48%, 78.00% 59.65%, 80.00% 63.39%, 82.00% 66.51%, 84.00% 68.89%, 86.00% 70.40%, 88.00% 70.99%, 90.00% 70.63%, 92.00% 69.32%, 94.00% 67.14%, 96.00% 64.18%, 98.00% 60.58%, 100.00% 56.49%);
+    }
+    /* -- Section Two -- */
+    #sec2{
+        text-align: center;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        padding: 3vh;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    .img-sec2 {
+        width: 50%;
+        height: 50%;
+    }
+    #p_about {
+        padding: 3vh;
+    }
+    #img-iam2 {
+        width: 80%;
+        height: 80%;
+    }
+    /* -- Section Three -- */
+    #sec3 {
+        text-align: center;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        padding: 3vh;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    #text_about {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 60%;
+        margin: auto;   
+    }
+    #sec3 {
+        padding: 2vh;
+    }
+    #linked, #whas, #gith, #correo, #maps, #phone {
+        border: 1px solid #ff6600;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    } 
+    .ico-cuad {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+    }
+    /* -- Section Four -- */
+    #sec4 {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        text-align: center;
+        padding: 3vh;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }     
+    .slide {
+        width: 30vh;
+        height: 35vh;
+        margin: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: slide-img 32s ease-in-out infinite;
+        padding-top: 5vh;
+    }
+    #txt-sec4 {
+        position: relative;
+        bottom: 2vh;
+        padding: 1vh;
+    }
+    @keyframes slide-img {
+        0% {background-image: url(./img/css.png);}
+        10% {background-image: url(./img/react.png);}
+        20% {background-image: url(./img/mongo.png);}
+        30% {background-image: url(./img/azure.png);}
+        40% {background-image: url(./img/piton.png);}
+        50% {background-image: url(./img/node.png);}
+        60% {background-image: url(./img/sql.png);}
+        70% {background-image: url(./img/powershell.png);}
+        80% {background-image: url(./img/linux.png);}
+        90% {background-image: url(./img/sql.png);}
+        100% {background-image: url(./img/jwt35ng);}
+    }   
+    #txt-sec4 {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 60%;
+        margin: auto;      
+    }
+    
+    #text_contact {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 60%;
+        margin: auto;
+    }
+    #form {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 70%;
+        height: 25vh;
+        margin: auto;
+        padding: 2vh;
+    }
+    textarea::placeholder {
+        color: #ff6600;
+        text-align: center;
+    }
+    input {
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    input::placeholder {
+        color: #ff6600;
+        text-align: center;
+    }
+    #btn_contact2 {
+        width: 50%;
+        background-color: whitesmoke;
+        color: #ff6600;
+        border-radius: 5px;
+        margin-top: 1vh;
+    }
+    #btn_contact2:hover {
+        background-color: #ff6600;
+        border: 1px solid whitesmoke;
+        color: azure;
+    }
+}
+@media (min-height:934px) {
+    section {
+        padding-top: 8vh;
+    }
+    body {
+        background-color: whitesmoke;
+        font-size: 1rem;
+    }
+    #sub-body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #wax {
+        width: 100%;
+        background-color: #ff6600;
+        height: 60%;
+        clip-path: polygon(100% 0%, 0% 0% , 0.00% 34.00%, 2.00% 34.28%, 4.00% 35.12%, 6.00% 36.49%, 8.00% 38.34%, 10.00% 40.60%, 12.00% 43.19%, 14.00% 46.02%, 16.00% 49.00%, 18.00% 52.01%, 20.00% 54.94%, 22.00% 57.71%, 24.00% 60.20%, 26.00% 62.33%, 28.00% 64.02%, 30.00% 65.22%, 32.00% 65.87%, 34.00% 65.97%, 36.00% 65.50%, 38.00% 64.48%, 40.00% 62.94%, 42.00% 60.95%, 44.00% 58.57%, 46.00% 55.89%, 48.00% 53.00%, 50.00% 50.00%, 52.00% 47.00%, 54.00% 44.11%, 56.00% 41.43%, 58.00% 39.05%, 60.00% 37.06%, 62.00% 35.52%, 64.00% 34.50%, 66.00% 34.03%, 68.00% 34.13%, 70.00% 34.78%, 72.00% 35.98%, 74.00% 37.67%, 76.00% 39.80%, 78.00% 42.29%, 80.00% 45.06%, 82.00% 47.99%, 84.00% 51.00%, 86.00% 53.98%, 88.00% 56.81%, 90.00% 59.40%, 92.00% 61.66%, 94.00% 63.51%, 96.00% 64.88%, 98.00% 65.72%, 100.00% 66.00%);
+    }
+    .error {
+        width: 40%;
+        height: 20%;
+        opacity: 0;
+    }
+    /* -- Section one -- */
+    #img-iam {
+        width: 50%;
+        height: 50%;
+    }
+    #p2-sec1 { 
+        font-weight: 800;
+        display: block;
+    }
+    .ico, #ico{
+        width: 5vh;
+        height: 5vh;
+    }
+    #sec1,#p2-sec1, #sec2-p {
+        padding: 2vh;
+    }
+    #img_about {
+        width: 5vh;
+        height: 5vh;
+    }
+    #p-sec1 {
+        width: 85%;
+        margin: auto;
+        padding: 1vh;
+    }
+    #sec1{
+        text-align: center;
+        width: 90%;
+        height: 70%;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        margin: auto;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        max-height: 525px;
+        position: relative;
+        bottom: 5vh;
+    }
+    #btn_one {
+        background-color: #ff6600;
+        color: white;
+        border: 0;
+        width: 35%;
+        height: 4vh;
+        border-radius: 10px;
+        position: relative;
+        bottom: 12vh;
+        left: 13vh;
+    }
+    #form-modal {
+        background-color: #ff6600;
+        width: 100%;
+        height: 25vh;
+        color: whitesmoke;
+        bottom: 95vh;
+        position: relative;
+        bottom: 38vh;
+        opacity: 0;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    .img-exit {
+        width: 25px;
+        height: 25px;
+        float: right;
+        position: relative;
+        bottom: 7vh;
+    }
+    #btn_one:hover {
+        background-color: whitesmoke;
+        border: 1px solid #ff6600;
+        color: #ff6600;
+    } 
+    #form-main  > input::placeholder {
+        color: #ff6600;
+        text-align: center;
+    }
+    #form-main  > textarea::placeholder {
+        color: #ff6600;
+        text-align: center;
+    } 
+    input, textarea {
+        border: 0;
+    }
+    textarea {
+        height: 8vh;
+    } 
+    #cont {
+        position: relative;
+        right: 2vh;
+        width: 65%;
+    }
+    #phone {
+        opacity: 0;
+    }
+    #sec2-p {
+        color: #ff6600;
+        font-weight: bold;
+    }
+    /* -- Footer -- */
+    footer {
+        width: 100%;    
+        background-color: #ff6600;
+        height: 10vh;
+        clip-path: polygon(100% 100%, 0% 100% , 0.00% 29.00%, 2.00% 29.48%, 4.00% 30.89%, 6.00% 33.17%, 8.00% 36.21%, 10.00% 39.88%, 12.00% 44.01%, 14.00% 48.42%, 16.00% 52.89%, 18.00% 57.24%, 20.00% 61.25%, 22.00% 64.76%, 24.00% 67.59%, 26.00% 69.62%, 28.00% 70.76%, 30.00% 70.96%, 32.00% 70.20%, 34.00% 68.53%, 36.00% 66.01%, 38.00% 62.77%, 40.00% 58.94%, 42.00% 54.71%, 44.00% 50.26%, 46.00% 45.81%, 48.00% 41.54%, 50.00% 37.66%, 52.00% 34.34%, 54.00% 31.73%, 56.00% 29.95%, 58.00% 29.08%, 60.00% 29.17%, 62.00% 30.20%, 64.00% 32.13%, 66.00% 34.87%, 68.00% 38.31%, 70.00% 42.27%, 72.00% 46.58%, 74.00% 51.06%, 76.00% 55.48%, 78.00% 59.65%, 80.00% 63.39%, 82.00% 66.51%, 84.00% 68.89%, 86.00% 70.40%, 88.00% 70.99%, 90.00% 70.63%, 92.00% 69.32%, 94.00% 67.14%, 96.00% 64.18%, 98.00% 60.58%, 100.00% 56.49%);
+    }
+    /* -- Section Two -- */
+    #sec2{
+        text-align: center;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        padding: 3vh;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    .img-sec2 {
+        width: 50%;
+        height: 50%;
+    }
+    #p_about {
+        padding: 3vh;
+    }
+    #img-iam2 {
+        width: 80%;
+        height: 80%;
+    }
+    /* -- Section Three -- */
+    #sec3 {
+        text-align: center;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        padding: 3vh;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    #text_about {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 60%;
+        margin: auto;   
+    }
+    #sec3 {
+        padding: 2vh;
+    }
+    #linked, #whas, #gith, #correo, #maps, #phone {
+        border: 1px solid #ff6600;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    } 
+    .ico-cuad {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+    }
+    /* -- Section Four -- */
+    #sec4 {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        box-shadow:  4px 5px 27px -6px rgba(0,0,0,0.75);
+        text-align: center;
+        padding: 3vh;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }     
+    .slide {
+        width: 30vh;
+        height: 35vh;
+        margin: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: slide-img 32s ease-in-out infinite;
+        padding-top: 5vh;
+    }
+    #txt-sec4 {
+        position: relative;
+        bottom: 2vh;
+        padding: 1vh;
+    }
+    @keyframes slide-img {
+        0% {background-image: url(./img/css.png);}
+        10% {background-image: url(./img/react.png);}
+        20% {background-image: url(./img/mongo.png);}
+        30% {background-image: url(./img/azure.png);}
+        40% {background-image: url(./img/piton.png);}
+        50% {background-image: url(./img/node.png);}
+        60% {background-image: url(./img/sql.png);}
+        70% {background-image: url(./img/powershell.png);}
+        80% {background-image: url(./img/linux.png);}
+        90% {background-image: url(./img/sql.png);}
+        100% {background-image: url(./img/jwt35ng);}
+    }   
+    #txt-sec4 {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 60%;
+        margin: auto;      
+    }
+    
+    #text_contact {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 60%;
+        margin: auto;
+    }
+    #form {
+        background-color: #ff6600;
+        color: whitesmoke;
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        width: 70%;
+        height: 25vh;
+        margin: auto;
+        padding: 2vh;
+    }
+    textarea::placeholder {
+        color: #ff6600;
+        text-align: center;
+    }
+    input {
+        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+    }
+    input::placeholder {
+        color: #ff6600;
+        text-align: center;
+    }
+    #btn_contact2 {
+        width: 50%;
+        background-color: whitesmoke;
+        color: #ff6600;
+        border-radius: 5px;
+        margin-top: 1vh;
+    }
+    #btn_contact2:hover {
+        background-color: #ff6600;
+        border: 1px solid whitesmoke;
+        color: azure;
+    }
+}
