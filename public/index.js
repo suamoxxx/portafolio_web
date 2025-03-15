@@ -14,17 +14,13 @@ let interseccionObsevada = new IntersectionObserver(
   objetivoOculto.forEach((seccion)=>interseccionObsevada.observe(seccion)); 
   
 //Texto dinamico//
-setInterval(()=>{
-      const owner = 'Don Felipe Limas';
-      document.getElementById('textDinamic').innerText = `Esta web la realizo ${owner}`;
-},3000); 
 
 //Escritura tipea texto en pantalla usando charAt
 const text = document.getElementById('p2-sec1');
 let str = text.innerHTML;
 text.innerHTML= "";
 let i = 0;
-const speed = 100;
+const speed = 90;
 const typeText = ()=> {
       if(i < str.length) {
           text.innerHTML += str.charAt(i);

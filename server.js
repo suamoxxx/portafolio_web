@@ -1,5 +1,6 @@
 import express from 'express'
 import path from 'path';
+import 'dotenv/config'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
 import nodemailer from 'nodemailer'
@@ -14,16 +15,16 @@ const corsOptions = {
     optionsSuccessStatus: 200
 }
 const app = express();
+const pass = process.env.PASS
 app.set('port', process.env.PORT || 3001)
 app.use(morgan('dev'));
-
 app.use(cors(corsOptions))
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json())
 app.get('/portafolio', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-// Api Rest Post para envio de datos al correo
+// Api Rest Post para envio de datos al correo, este es una operacion asincronica
 app.post('/mailer', async (req,res)=>{
     const { name, email, message } = req.body;
     try {
@@ -34,7 +35,7 @@ app.post('/mailer', async (req,res)=>{
             secure: true, 
             auth: {
               user: "dafevi.limas@gmail.com",
-              pass: "ttklqjokolnxljwt",
+              pass: pass,
             },
         });
         // Mensaje a enviar
@@ -57,6 +58,7 @@ app.post('/mailer', async (req,res)=>{
         console.log(err)
     }
 })
+// Servidor corriendo en puerto indicado
 app.listen(app.get('port'), () => {
     console.log(`Server running on port ${app.get('port')}`);
 });
