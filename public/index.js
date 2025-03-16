@@ -37,15 +37,15 @@ const submitForm = document.getElementById('form-contact')
 submitForm.addEventListener('submit', (e)=>{
   e.preventDefault()
   const n = document.getElementById('name');
-  const email = document.getElementById('email');
+  const mail = document.getElementById('email');
   const m = document.getElementById('message');
   const name = n.value;
-  const mail = email.value; 
+  const email = mail.value; 
   const message = m.value;
   const response = fetch('/mailer', {
       method: 'POST',
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify({ name, mail, message })
+      body: JSON.stringify({ name, email, message })
     }); 
     alert("correo enviado")
     n.value = ''

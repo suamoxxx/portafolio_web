@@ -9,7 +9,7 @@ import morgan from 'morgan';
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const corsOptions = {
-    origin: 'https://portafolio-web-seven-zeta.vercel.app/',
+    origin: ['https://portafolio-web-seven-zeta.vercel.app', 'https://portafolio-adheyw1yx-suamoxxxs-proyectos.vercel.app'],
     methods: ['GET', 'POST'], 
     allowedHeaders: ['Content-Type', 'Authorization'],
     optionsSuccessStatus: 200
@@ -55,7 +55,8 @@ app.post('/mailer', async (req,res)=>{
             }
         })
     } catch (err) {
-        console.log(err)
+        console.log(err);
+        return res.status(500).json({ error: 'Error en el servidor' });
     }
 })
 // Servidor corriendo en puerto indicado
