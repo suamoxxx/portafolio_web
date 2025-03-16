@@ -9,7 +9,9 @@ body {
 html {
     height: 100%;
 }
-
+.ico {
+   filter: drop-shadow(1px 1px 5px #ff6600); 
+}
 /* -- Screen for smartphone --*/
 @media (min-width:320px){
     section {
@@ -322,12 +324,18 @@ html {
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
         justify-content: center;
         display: flex;
+        font-family: calibri;
+        font-size: 18px;
     }
     input::placeholder{
         color: #ff6600;   
     }
     textarea::placeholder{
         color: #ff6600;  
+        text-align: center;
+        padding-top: 25%;
+        font-family: calibri;
+        font-size: 18px;
     }
     .text-modal {
         position: relative;
@@ -398,6 +406,7 @@ html {
         width: 35px;
         height: 35px;
         margin: 10px;
+        filter: drop-shadow(1px 1px 5px #ff6600);
     } 
     #sec1, #sec2, #sec3, #sec4 {
         height: 520px;
@@ -469,16 +478,17 @@ html {
         color: #ff6600;
     }
     #cont {
-        width: 25%;
+        width: 20%;
         height: 3vw;
         position: relative;
         display: flex;
         bottom: 14vw;
-        left: 5vh;
+        left: 36vh;
         align-content: center;
         justify-content: space-between;
         border-bottom: 1px solid #ff6600;
     }
+
     .hidden { 
         opacity: 0;
     }
@@ -489,23 +499,24 @@ html {
         display: flex;
         color: #ff6600;
         bottom: 11vw;
-        left: 6vh;
-
+        left: 19vw;
+        font-size: 19px;
+        font-family: calibri;
     }
     #btn_one {
-        width: 140px;
-        height: 45px;
+        width: 120px;
+        height: 37px;
         animation: bounce-top 0.9s both;
         border: 0;
-        font-weight: 500;
         background-color: #ff6600;
         color: white;
         font-size: 18px;
         display: grid;
         position: relative;
-        bottom: 12vw;
-        left: 20vw;
+        bottom: 11vw;
+        left: 4vw;
         align-content: center;
+        border-radius: 7px;
     }
     #btn_one:hover {
         background-color: white;
@@ -514,11 +525,11 @@ html {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     #img-iam {
-        width: 43%;
-        height: 69%;
+        width: 40%;
+        height: 70%;
         left: 35%;
         position: relative;
-        bottom: 2vh;
+        bottom: 4vw;
     }
     #p-sec1 {
         font-family: calibri;
@@ -545,13 +556,20 @@ html {
         margin: 5px;
     }
     #text_about {
-        position: relative;
         color: white;
         background-color: #ff6600;
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-        width: 20%;
-        height: 4vw;
+        height: 2vw;
+        width: 5vw;
+        justify-content: center;
+    }
+    h2 {
+        position: absolute;
         font-size: 20px;
+        font-family: calibri;
+        margin: auto;
+        text-align: center;
+        margin-left: 4px;
     }
     #sec3 {
         display: grid;
@@ -577,6 +595,7 @@ html {
        font-family: calibri;
        position: relative;
        bottom: 2vh;
+       font-size: 17px;
     }
     #form-main {
         bottom: 3vh;
@@ -675,6 +694,9 @@ html {
         bottom: 9px;
         z-index: 88888;
     }
+    #ico {
+        filter: drop-shadow(1px 1px 5px #ff6600); 
+     }
     .slide {
         width: 35vh;
         height: 35vh;

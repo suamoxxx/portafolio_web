@@ -9,7 +9,7 @@ import morgan from 'morgan';
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const corsOptions = {
-    origin: 'http://127.0.0.1:3001',
+    origin: 'https://portafolio-web-seven-zeta.vercel.app/',
     methods: ['GET', 'POST'], 
     allowedHeaders: ['Content-Type', 'Authorization'],
     optionsSuccessStatus: 200
