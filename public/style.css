@@ -64,6 +64,8 @@ html {
         margin: auto;
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
         max-height: 525px;
+        position: relative;
+        top: 5vw;
 
     }
     #btn_one {
@@ -71,12 +73,8 @@ html {
         color: white;
         border: 0;
         width: 50%;
-        height: 3vh;
         border-radius: 10px;
-        top: 4vh;
-        display: block;
-        margin: auto    ;
-        margin-top: 1vh;
+
     }
     #form-modal {
         background-color: #ff6600;
@@ -108,6 +106,9 @@ html {
     } 
     input, textarea {
         border: 0;
+    }
+    input::placeholder {
+        color: #ff6600;
     }
     textarea {
         height: 8vh;
@@ -328,11 +329,6 @@ html {
     textarea::placeholder{
         color: #ff6600;  
     }
-    h4 {
-        text-align: center;
-        font-size: 20px;
-        position: relative;
-    }
     .text-modal {
         position: relative;
         bottom: 2vh;
@@ -355,18 +351,19 @@ html {
         position: relative;
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
         position: relative;
-        left: 7vh;
+        margin-top: 30%;
+        margin-bottom: 10%;
     }
     #form-modal {
         background-color: #ff6600;
-        height: 300px;
+        height: 320px;
         width: 280px;
         color: white;
         position: relative;
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
         position: relative;
-        bottom: 45vh;
-        left: 43vh;
+        bottom: 52vh;
+        left: 39vh;
      }
     @keyframes scale {
         0%  {
@@ -390,12 +387,12 @@ html {
         z-index: 1;
     }
     #img-iam2 {
-        width: 530px;
-        height: 460px;
-        position: relative;
-        top: 8px;
-        left: 10px;
+        width: 50%;
+        height: 70%;
         border-radius: 16% 80% 36% 57% / 58% 52% 52% 33%;
+        margin-left: 48%;
+        position: relative;
+        top: 8%;
     }
     #img_about {
         width: 35px;
@@ -426,7 +423,9 @@ html {
         border: 2px solid #ff6600;
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
         position: relative;
-        bottom: 155px;
+        position: relative;
+        right: 17vw;
+        bottom: 65%;
     }
     #linked {
         width: 100px;
@@ -453,33 +452,32 @@ html {
         width: 100px;
         height: 100px;
         text-align: center;
-        grid-row-start: 3;
-        grid-column-start: 3;
         border: 2px solid #ff6600;
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
         position: relative;
-        bottom: 155px;
+        top: 85%;
+        right: 10vw;
     }    
     #sec4{
-        display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        z-index: 22222222222222222;
+        position: relative;
+        bottom: 11vw;
     }
     #name, #email, #message {
         color: #ff6600;
     }
     #cont {
-        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-        width: 250px;
-        height: 37px;
+        width: 25%;
+        height: 3vw;
         position: relative;
         display: flex;
-        bottom: 16vh;
+        bottom: 14vw;
         left: 5vh;
-        justify-content: center;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        align-content: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ff6600;
     }
     .hidden { 
         opacity: 0;
@@ -490,38 +488,40 @@ html {
         position: relative;
         display: flex;
         color: #ff6600;
-        bottom: 14vh;
+        bottom: 11vw;
         left: 6vh;
-        font-weight: 500;
+
     }
     #btn_one {
         width: 140px;
         height: 45px;
         animation: bounce-top 0.9s both;
         border: 0;
-        font-weight: 400;
-        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
+        font-weight: 500;
         background-color: #ff6600;
         color: white;
+        font-size: 18px;
+        display: grid;
+        position: relative;
+        bottom: 12vw;
+        left: 20vw;
+        align-content: center;
     }
     #btn_one:hover {
         background-color: white;
         color: salmon;
         border: 1px solid #ff6600;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-        font-weight: 900;
     }
     #img-iam {
-        width: 40%;
-        height: 60%;
+        width: 43%;
+        height: 69%;
         left: 35%;
         position: relative;
         bottom: 2vh;
     }
     #p-sec1 {
         font-family: calibri;
-        letter-spacing: 1px;
         width: 50%;
         margin-left: 4%;
         position: relative;
@@ -533,32 +533,25 @@ html {
         line-height: 26px;
         font-family: Gill Sans Ultra Bold Condensed;
         position: absolute;
-        right: 5vh;
     }
     #p_about {
-        grid-column-start: 5;
-        grid-column-end: 7;
+        font-size: 20px;
+        font-family: calibri;
+        width: 50%;
         position: relative;
-        right: 15vh;
-        font-size: 17px;
-        width: 400px;
+        bottom: 57%;
     }
     #git, #link, #gmail {
         margin: 5px;
     }
     #text_about {
-        grid-row-start: 1;
         position: relative;
-        right: 100px;
         color: white;
         background-color: #ff6600;
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-        width: 110px;
-        display: flex;
-        height: 50px;
-        justify-content: center;
-        align-items: center;
-        bottom: 16px;
+        width: 20%;
+        height: 4vw;
+        font-size: 20px;
     }
     #sec3 {
         display: grid;
@@ -566,17 +559,17 @@ html {
         grid-template-columns: repeat(7,1fr);
     }
     #text_contact {
-        grid-column-start: 4;
-        grid-column-end: 5;
         background-color: #ff6600;
         color: white;
-        text-align: center;
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
         height: 40px;
+        width: 100%;
         align-content: center;
+        font-size: 18px;
+        padding: 5px;
         position: relative;
-        bottom: 17px;
-        left: 70px;
+        bottom: 90%;
+        left: 44vh;
     }
     #text_co {
        position: relative;
@@ -593,10 +586,8 @@ html {
         width: 25px;
         height: 25px;
         position: relative;
-        left: 35vh;
-        bottom: 3svh;
-    }
-    
+        bottom: 3vh;
+    }  
     #btn_contact2 {
         width: 100px;
         height: 30px;
@@ -612,27 +603,16 @@ html {
         color: white;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
-    #sec4 {
-        display: grid;
-        grid-template-columns: repeat(7,1fr);
-        grid-template-rows: repeat(4,1fr);
-    }
+   
     #txt-sec4 {
-        display: grid;
-        grid-column-start: 4;
         background-color: #ff6600;
         color: aliceblue;
-        text-align: center;
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
-        height: 45px;
-        align-content: center;
+        height: 48px;
         font-size: 15px;
         width: 150px;
         position: relative;
-        bottom: 118px;
-        left: 10vh;
     }
-
     .img-sec2 {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -645,18 +625,17 @@ html {
     .targets {
         opacity: 0;
     }
-    
     .showObserver {
         opacity: 1;
         animation: animateObserver 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
     .ctc {
-        border-radius: 20px;
         position: relative;
+        width: 25%;
         display: flex;
+        bottom: 50%;
         height: 60px;
-        top: 400px; 
-        right: 50px;   
+        left: 12%;  
         border-radius: 10% 100% 10% 100% / 87% 10% 85% 10%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
@@ -700,11 +679,10 @@ html {
         width: 35vh;
         height: 35vh;
         position: relative;
-        top: 17vh;
-        right: 15vh;
         background-size: contain;
         background-repeat: no-repeat;
         animation: slide-img 32s ease-in-out infinite;
+        top: 4vw;
     }
     @keyframes slide-img {
         0% {background-image: url(./img/css.png);}
@@ -780,6 +758,11 @@ html {
       footer {
         display: none;
       }  
+      .ico-cuad {
+        display: grid;
+        position: relative;
+        top: 5vw;
+      }
 }
 
 }

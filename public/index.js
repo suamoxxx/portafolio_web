@@ -42,15 +42,15 @@ submitForm.addEventListener('submit', (e)=>{
   const name = n.value;
   const mail = email.value; 
   const message = m.value;
-  const response = fetch('http://127.0.0.1:3001/mailer', {
+  const response = fetch('/mailer', {
       method: 'POST',
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({ name, mail, message })
     }); 
+    alert("correo enviado")
     n.value = ''
     email.value = ''
-    m.value = ''
-    
+    m.value = ''    
 })
 
 // Muestra el modal del portafolio
