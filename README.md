@@ -40,7 +40,7 @@ cors
 morgan
 dotenv
 
-FRONTEND:
+
 Html 5
 Css 
 Css Grid, flexbox
