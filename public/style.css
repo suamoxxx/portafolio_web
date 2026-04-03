@@ -209,11 +209,11 @@ html {
         10% {background-image: url(./img/react.png);}
         20% {background-image: url(./img/mongo.png);}
         30% {background-image: url(./img/azure.png);}
-        40% {background-image: url(./img/piton.png);}
+        40% {background-image: url(./img/java.png);}
         50% {background-image: url(./img/node.png);}
         60% {background-image: url(./img/sql.png);}
         70% {background-image: url(./img/powershell.png);}
-        80% {background-image: url(./img/linux.png);}
+        80% {background-image: url(./img/bash.png);}
         90% {background-image: url(./img/sql.png);}
         100% {background-image: url(./img/jwt.png);}
     }   
@@ -275,9 +275,6 @@ html {
         width: 80%;
         margin: auto;
     }
-    #text_contact {
-        
-    }
 }
 @media (min-width:870px){
     #img-iam {
@@ -293,7 +290,33 @@ html {
     #form-contact {
         font-size: 22px;
     }
-    
+}
+@media(min-width:820px){
+    #img-iam {
+        width: 40%;
+        height: 40%;
+    }
+}
+@media (min-width:980px) {
+    #img-iam {
+        height: 50%;
+        position: relative;
+        left: 6vw;
+        bottom: 13vw;
+    }
+    #btn_one {
+        position: relative;
+        bottom: 11vw;
+    }
+    #p2-sec1 {
+        position: absolute;
+    }
+    #p-sec1 {
+        width: 40%;
+        position: relative;
+        top: 11vw;
+    }
+}   
 @media (min-width:1300px) {
     body{
         margin: 0;
@@ -711,11 +734,11 @@ html {
         10% {background-image: url(./img/react.png);}
         20% {background-image: url(./img/mongo.png);}
         30% {background-image: url(./img/azure.png);}
-        40% {background-image: url(./img/piton.png);}
+        40% {background-image: url(./img/java.png);}
         50% {background-image: url(./img/node.png);}
         60% {background-image: url(./img/sql.png);}
         70% {background-image: url(./img/powershell.png);}
-        80% {background-image: url(./img/linux.png);}
+        80% {background-image: url(./img/bash.png);}
         90% {background-image: url(./img/sql.png);}
         100% {background-image: url(./img/jwt.png);}
     }
@@ -786,5 +809,30 @@ html {
         top: 5vw;
       }
 }
-
+@media(min-width:1920px){
+    section{
+        width: 1800px;
+        height: 800px;
+    }
+    #img-iam {
+        position: relative;
+        top: 5px;
+    }
+    #cont {
+        width: 10%;
+        height: 10%;
+        margin-top: 12px;
+    }
+    .slide {
+        height: 70%;
+        width: 60%;
+    }
+    #sec2-p{
+        margin-top: 80px;
+        margin-left: 50px;
+    }
+    #text_co {
+        top: 1px;
+    }
 }
+

@@ -21,7 +21,7 @@ app.use(morgan('dev'));
 app.use(cors(corsOptions))
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json())
-app.get('/portafolio', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 // Api Rest Post para envio de datos al correo, este es una operacion asincronica
@@ -30,11 +30,11 @@ app.post('/mailer', async (req,res)=>{
     try {
         // Configuracion del smtp 
         const transport = nodemailer.createTransport({
-            host: "smtp.gmail.com",
+            host: "smtp.resend.com",
             port: 465,
             secure: true, 
             auth: {
-              user: "dafevi.limas@gmail.com",
+              user: "resend",
               pass: pass,
             },
         });
