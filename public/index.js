@@ -5,6 +5,7 @@ const opcion = {
 }
 let objetivoOculto = document.querySelectorAll('.targets');
 // Instancia del intersecion observer
+
 let interseccionObsevada = new IntersectionObserver(
   entries=>{
      entries.forEach((entry)=>{
@@ -13,8 +14,6 @@ let interseccionObsevada = new IntersectionObserver(
   }, opcion);
   objetivoOculto.forEach((seccion)=>interseccionObsevada.observe(seccion)); 
   
-//Texto dinamico//
-
 //Escritura tipea texto en pantalla usando charAt
 const text = document.getElementById('p2-sec1');
 let str = text.innerHTML;
@@ -34,24 +33,41 @@ setInterval(() => {
 
 // Enviar correo al backend
 const submitForm = document.getElementById('form-contact')
-submitForm.addEventListener('submit', (e)=>{
+submitForm.addEventListener('submit', async (e)=>{
   e.preventDefault()
+
   const n = document.getElementById('name');
   const mail = document.getElementById('email');
   const m = document.getElementById('message');
+
   const name = n.value;
   const email = mail.value; 
   const message = m.value;
-  const response = fetch('/mailer', {
-      method: 'POST',
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify({ name, email, message })
-    }); 
-    alert("correo enviado")
+
+try {
+  const response = await fetch('/mailer', {
+    method: 'POST',
+    headers: { 
+      "Content-Type": "application/json", 
+      "Accept": "application/json" 
+    },
+    body: JSON.stringify({ name, email, message })
+  }); 
+
+  if(response.ok){
+    alert("¡Correo enviado con éxito!")
     n.value = ''
     email.value = ''
-    m.value = ''    
-})
+    m.value = ''
+  } else {
+      alert("Error en el servidor al enviar el correo.");
+    }
+
+} catch (error){
+    console.error("Error de red:", error);
+    alert("No se pudo conectar con el servidor.");
+}
+});
 
 // Muestra el modal del portafolio
 const btnModal = document.getElementById("btn_one")
@@ -80,3 +96,27 @@ closeModal.addEventListener('click',(e)=>{
 
   })
 })
+
+//Capturar tamaño de pantalla
+const screenData = {
+    width: window.screen.width,
+    height: window.screen.height,
+    availWidth: window.screen.availWidth, // Espacio real disponible sin barras de sistema
+    availHeight: window.screen.availHeight
+};
+
+// Enviarlo al servidor (ejemplo con fetch)
+fetch('/screen-size', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(screenData)
+});
+
+
+/*const verViewport = () => {
+  const ancho = window.innerWidth;
+  const alto = window.innerHeight;
+  alert(`Viewport actual: ${ancho}px de ancho x ${alto}px de alto`);
+};
+verViewport()
+*/

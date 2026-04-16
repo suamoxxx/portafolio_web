@@ -316,7 +316,76 @@ html {
         position: relative;
         top: 11vw;
     }
-}   
+} 
+
+/* Pantalla mediana, tablet con el navegador en modo desktop*/
+
+@media (width:1200px) {
+    
+    body{
+        background-color: whitesmoke;
+    }
+    #img-iam {
+        width: 35%;
+        height: 35%;
+        left: 12vh;
+    }
+    #img-iam2 {
+        width: 75%;
+        height: 75%;
+        border-radius: 10%;
+    }
+}
+
+@media only screen and (width:1130px) and (height: 706px){
+    #img-iam {
+     width: 35%;
+     height: 35%;
+     left: 65vh;
+     margin-top: 25px;
+    }
+    #p2-sec1{
+        top: 3vh;
+        left: 12vh;
+    }
+    #p-sec1 {
+        left: 12vh;
+    }
+    #btn_one {
+        width: 16vh;
+        height: 7vh;
+    }
+}
+/* Pantallas de escritorio DESKTOP*/
+@media (width:1280px) {
+    
+    body{
+        background-color: whitesmoke;
+    }
+    #img-iam {
+        width: 30%;
+        height: 30%;
+        position: relative;
+        left: 45vw;
+        margin-top: 85px;
+    }
+    #img-iam2 {
+        width: 55%;
+        height: 55%;
+        border-radius: 5%;
+    }
+    #p2-sec1{
+        top: 10px;
+        left: 95px;
+    }
+    #btn_one{
+        width: 155px;
+        height: 25px;
+    }  
+    #p-sec1{
+        left: 75px;
+    }
+}
 @media (min-width:1300px) {
     body{
         margin: 0;
@@ -817,11 +886,8 @@ html {
     #img-iam {
         position: relative;
         top: 5px;
-    }
-    #cont {
-        width: 10%;
-        height: 10%;
-        margin-top: 12px;
+        width: 35%;
+        right: 9px;
     }
     .slide {
         height: 70%;
@@ -835,4 +901,32 @@ html {
         top: 1px;
     }
 }
-
+@media only screen and (width: 1200px) and (height: 1920px) {
+    .showObserver {
+        opacity: 1;
+        animation: animateObserver 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        height: 1000px;
+        background-color: #c7c7c7;
+        width: 100%;
+        box-sizing: border-box;     
+        }
+    #wax {
+        position: fixed;
+        text-align:center;
+        left:0;
+        z-index:-1;
+        right:0;
+        top:0;
+        height:40vh;
+        clip-path: polygon(100% 0%, 0% 0% , 0.00% 34.00%, 2.00% 34.28%, 4.00% 35.12%, 6.00% 36.49%, 8.00% 38.34%, 10.00% 40.60%, 12.00% 43.19%, 14.00% 46.02%, 16.00% 49.00%, 18.00% 52.01%, 20.00% 54.94%, 22.00% 57.71%, 24.00% 60.20%, 26.00% 62.33%, 28.00% 64.02%, 30.00% 65.22%, 32.00% 65.87%, 34.00% 65.97%, 36.00% 65.50%, 38.00% 64.48%, 40.00% 62.94%, 42.00% 60.95%, 44.00% 58.57%, 46.00% 55.89%, 48.00% 53.00%, 50.00% 50.00%, 52.00% 47.00%, 54.00% 44.11%, 56.00% 41.43%, 58.00% 39.05%, 60.00% 37.06%, 62.00% 35.52%, 64.00% 34.50%, 66.00% 34.03%, 68.00% 34.13%, 70.00% 34.78%, 72.00% 35.98%, 74.00% 37.67%, 76.00% 39.80%, 78.00% 42.29%, 80.00% 45.06%, 82.00% 47.99%, 84.00% 51.00%, 86.00% 53.98%, 88.00% 56.81%, 90.00% 59.40%, 92.00% 61.66%, 94.00% 63.51%, 96.00% 64.88%, 98.00% 65.72%, 100.00% 66.00%);
+    }
+     
+    #sec1, #sec2, #sec3, #sec4 {
+        background-color: whitesmoke;
+        z-index: 9999;
+    }
+}
