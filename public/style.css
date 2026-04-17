@@ -318,10 +318,9 @@ html {
     }
 } 
 
-/* Pantalla mediana, tablet con el navegador en modo desktop*/
+/* Screen for smartphone mode desktop */
 
 @media (width:1200px) {
-    
     body{
         background-color: whitesmoke;
     }
@@ -335,9 +334,15 @@ html {
         height: 75%;
         border-radius: 10%;
     }
+    #p2-sec1{
+        font-family: Gill Sans Ultra Bold Condensed;
+    }
 }
 
 @media only screen and (width:1130px) and (height: 706px){
+    #wax {
+        height: 65%;
+    }
     #img-iam {
      width: 35%;
      height: 35%;
@@ -347,6 +352,7 @@ html {
     #p2-sec1{
         top: 3vh;
         left: 12vh;
+        font-family: Gill Sans Ultra Bold Condensed;
     }
     #p-sec1 {
         left: 12vh;
@@ -356,7 +362,7 @@ html {
         height: 7vh;
     }
 }
-/* Pantallas de escritorio DESKTOP*/
+/* Screen for desktop */
 @media (width:1280px) {
     
     body{
@@ -902,9 +908,22 @@ html {
     }
 }
 @media only screen and (width: 1200px) and (height: 1920px) {
+    .targets {
+        opacity: 0;
+    }
     .showObserver {
         opacity: 1;
         animation: animateObserver 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    @keyframes animateObserver {
+       0% {
+         transform: scale(0);
+         opacity: 1;
+       }
+       100% {
+          transform: scale(1);
+          opacity: 1;
+       }
     }
     body{
         margin: 0;
@@ -921,12 +940,299 @@ html {
         z-index:-1;
         right:0;
         top:0;
-        height:40vh;
-        clip-path: polygon(100% 0%, 0% 0% , 0.00% 34.00%, 2.00% 34.28%, 4.00% 35.12%, 6.00% 36.49%, 8.00% 38.34%, 10.00% 40.60%, 12.00% 43.19%, 14.00% 46.02%, 16.00% 49.00%, 18.00% 52.01%, 20.00% 54.94%, 22.00% 57.71%, 24.00% 60.20%, 26.00% 62.33%, 28.00% 64.02%, 30.00% 65.22%, 32.00% 65.87%, 34.00% 65.97%, 36.00% 65.50%, 38.00% 64.48%, 40.00% 62.94%, 42.00% 60.95%, 44.00% 58.57%, 46.00% 55.89%, 48.00% 53.00%, 50.00% 50.00%, 52.00% 47.00%, 54.00% 44.11%, 56.00% 41.43%, 58.00% 39.05%, 60.00% 37.06%, 62.00% 35.52%, 64.00% 34.50%, 66.00% 34.03%, 68.00% 34.13%, 70.00% 34.78%, 72.00% 35.98%, 74.00% 37.67%, 76.00% 39.80%, 78.00% 42.29%, 80.00% 45.06%, 82.00% 47.99%, 84.00% 51.00%, 86.00% 53.98%, 88.00% 56.81%, 90.00% 59.40%, 92.00% 61.66%, 94.00% 63.51%, 96.00% 64.88%, 98.00% 65.72%, 100.00% 66.00%);
-    }
-     
+        height:39vh;
+        
+    }  
     #sec1, #sec2, #sec3, #sec4 {
         background-color: whitesmoke;
         z-index: 9999;
+    }
+    footer{
+        display: none;
+    }
+}
+@media (width: 1129px) and (height: 581px) {
+    body {
+        background-color: #c7c7c7;
+    }
+    footer {
+        opacity: 0;
+    }
+    #wax {
+        position: fixed;
+        height: 75vh;
+    }
+    #txt-sec4 {
+        width: 200px;
+    }
+    #sec1, #sec2, #sec3, #sec4 {
+        background-color: whitesmoke;
+        width: 750px;
+        height: 350px;
+    } 
+    #img-iam{
+        width: 230px;
+        height: 200px;
+        left: 52vh;
+        margin-top: 55px;
+    }
+    #gith, #whas, #linked, #correo, #maps {
+        width: 150px;
+        font-size: medium;
+    }
+    #gith, #linked, #maps{
+        left: 15px;
+        position: relative;
+    }
+    #whas, #correo {
+        right: 155px;
+        position: relative;
+    }
+    #img-iam2 {
+        width: 200px;
+        height: 180px;
+        border-radius: 35px;
+    }
+    #text_about {
+        width: 200px;
+    }
+    #text_contact {
+        width: 190px;
+    }
+    #btn_one {
+        width: 20vh;
+        height: 5vh;
+    }
+    #p2-sec1 {
+        left: 55px;
+        font-style: italic;
+        font-family: Gill Sans Ultra Bold Condensed;
+    }
+    #p-sec1 {
+        top: 15vh;
+        left: 5vh;
+        font-size: medium;
+    }
+    #p_about {
+        font-size: medium;
+    }
+    #form {
+        width: 180px;
+        height: 180px;
+        left: 25vh;
+        bottom: 25vh;
+        position: relative;
+    }
+       .targets {
+            opacity: 0;
+        }
+        .showObserver {
+            opacity: 1;
+            animation: animateObserver 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        @keyframes animateObserver {
+        0% {
+            transform: scale(0);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        }
+}
+@media (width: 1200px) and (height: 678px) {
+    body {
+        background-color: #c7c7c7;
+    }
+    footer {
+        opacity: 0;
+    }
+    #wax {
+        position: fixed;
+        height: 55vh;
+    }
+    #img-iam{
+        width: 230px;
+        height: 200px;
+        left: 48vh;
+        margin-top: 65px;
+    }
+    #txt-sec4 {
+        width: 200px;
+    }
+    #btn_one {
+        width: 20vh;
+        height: 5vh;
+    }
+    #p2-sec1 {
+        left: 55px;
+        font-style: italic;
+        font-family: Gill Sans Ultra Bold Condensed;
+    }
+    #gith, #whas, #linked, #correo, #maps {
+        width: 150px;
+        font-size: medium;
+    }
+    #gith, #linked, #maps{
+        left: 15px;
+        position: relative;
+    }
+    #whas, #correo {
+        right: 155px;
+        position: relative;
+    }
+    #form {
+        width: 180px;
+        height: 190px;
+        left: 25vh;
+        bottom: 25vh;
+        position: relative;
+    }
+    #p-sec1 {
+        top: 15vh;
+        left: 5vh;
+        font-size: medium;
+    }
+    #text_about {
+        width: 200px;
+    }
+    #img-iam2 {
+        width: 80px;
+        height: 80px;
+        border-radius: 35px;
+    }
+    #text_contact {
+        width: 190px;
+    }
+    #sec1, #sec2, #sec3, #sec4 {
+        background-color: whitesmoke;
+        width: 730px;
+        height: 370px;
+    } 
+    #img-iam2{
+        width: 180px;
+        height:  180px;
+    }
+    #p_about {
+        font-size: medium;
+        width: 700px;
+        right: 25px;
+        position: relative;
+    }
+    .targets {
+        opacity: 0;
+    }
+    .showObserver {
+        opacity: 1;
+        animation: animateObserver 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    @keyframes animateObserver {
+       0% {
+         transform: scale(0);
+         opacity: 1;
+       }
+       100% {
+          transform: scale(1);
+          opacity: 1;
+       }
+    }
+}
+@media (width: 1280px) and (height: 712px) {
+    body {
+        background-color: #c7c7c7;
+    }
+    footer {
+        opacity: 0;
+    }
+    #wax {
+        position: fixed;
+        height: 55vh;
+    }
+    #img-iam{
+        width: 230px;
+        height: 200px;
+        left: 40vh;
+        margin-top: 65px;
+    }
+    #txt-sec4 {
+        width: 200px;
+    }
+    #btn_one {
+        width: 20vh;
+        height: 5vh;
+    }
+    #p2-sec1 {
+        left: 55px;
+        font-style: italic;
+        font-family: Gill Sans Ultra Bold Condensed;
+    }
+    #gith, #whas, #linked, #correo, #maps {
+        width: 150px;
+        font-size: medium;
+    }
+    #gith, #linked, #maps{
+        left: 15px;
+        position: relative;
+    }
+    #whas, #correo {
+        right: 155px;
+        position: relative;
+    }
+    #form {
+        width: 180px;
+        height: 190px;
+        left: 25vh;
+        bottom: 25vh;
+        position: relative;
+    }
+    #p-sec1 {
+        top: 15vh;
+        left: 5vh;
+        font-size: medium;
+        width: 290px;
+    }
+    #text_about {
+        width: 200px;
+    }
+    #img-iam2 {
+        width: 80px;
+        height: 80px;
+        border-radius: 35px;
+    }
+    #text_contact {
+        width: 190px;
+    }
+    #sec1, #sec2, #sec3, #sec4 {
+        background-color: whitesmoke;
+        width: 730px;
+        height: 370px;
+    } 
+    #img-iam2{
+        width: 160px;
+        height:  160px;
+    }
+    #p_about {
+        font-size: medium;
+        width: 730px;
+        right: 25px;
+        position: relative;
+    }
+    .targets {
+        opacity: 0;
+    }
+    .showObserver {
+        opacity: 1;
+        animation: animateObserver 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    @keyframes animateObserver {
+       0% {
+         transform: scale(0);
+         opacity: 1;
+       }
+       100% {
+          transform: scale(1);
+          opacity: 1;
+       }
     }
 }

@@ -112,8 +112,8 @@ fetch('/screen-size', {
     body: JSON.stringify(screenData)
 });
 
-
-/*const verViewport = () => {
+/*
+const verViewport = () => {
   const ancho = window.innerWidth;
   const alto = window.innerHeight;
   alert(`Viewport actual: ${ancho}px de ancho x ${alto}px de alto`);
